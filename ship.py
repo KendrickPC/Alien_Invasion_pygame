@@ -8,7 +8,7 @@ class Ship():
         self.screen = screen
 
         # Load the ship image and get its rectangle
-        self.image = pygame.image.load('images/spaceship1.bmp')
+        self.image = pygame.image.load('images/sky_blue_ship.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 

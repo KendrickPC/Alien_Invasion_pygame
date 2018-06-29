@@ -18,13 +18,13 @@ def run_game():
     ship = Ship(screen)
 
     # Set background color RGB values.
-    bg_color = (255, 255, 255)
+    bg_color = (0, 191, 255)
 
     # Start main loop for game
     # Event loop
     while True:
         gf.check_events()
-        gf.update(ai_settings, screen, ship)
+        gf.update_screen(ai_settings, screen, ship)
 
 # Initializes game and starts main loop
 run_game()
