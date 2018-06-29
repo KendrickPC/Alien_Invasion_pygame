@@ -24,14 +24,7 @@ def run_game():
     # Event loop
     while True:
         gf.check_events()
-
-        # Redraw screen during each pass through the loop.
-        # Connected to bg_color RGB values
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-
-        # Make the most recently drawn screen visible.
-        pygame.display.flip()
+        gf.update(ai_settings, screen, ship)
 
 # Initializes game and starts main loop
 run_game()
