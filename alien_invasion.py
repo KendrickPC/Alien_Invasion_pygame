@@ -15,7 +15,7 @@ def run_game():
     pygame.display.set_caption("Ken's First PyGame")
 
     # Make a ship
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     # Set background color RGB values.
     bg_color = (0, 191, 255)
