@@ -16,10 +16,15 @@ class Ship():
 
         # Start each new ship at the bottom center of screen
         self.rect.centerx = self.screen_rect.centerx
+        # The code below starts the ship in the center of the screen
+        # self.rect.center = self.screen_rect.center
+        # The code velow starts the ship at the bottom of the screen
+        # with lateral boundaries have been set
         self.rect.bottom = self.screen_rect.bottom
 
-        # Store a decimanl value for the ship's center
+        # Store a decimal value for the ship's center
         self.center = float(self.rect.centerx)
+        
 
         # Movement flag
         self.moving_right = False
@@ -35,6 +40,7 @@ class Ship():
 
         #Update rect object from self.center
         self.rect.centerx = self.center
+
 
     def blitme(self):
         """ Draw the ship at its current location. """

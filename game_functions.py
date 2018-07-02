@@ -13,6 +13,8 @@ def check_keydown_events(event, ship):
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
+    # 12-4 Keys test: 274 is down, 275, 273, and 276
+    # print(event.key)
 
 def check_keyup_events(event, ship):
     """ Respond to key releases """
