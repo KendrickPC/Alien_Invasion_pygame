@@ -17,6 +17,9 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
     # print(event.key)
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, ship, bullets)
+    # Exit the game with "q" key
+    elif event.key == pygame.K_q:
+        sys.exit()
 
 def check_keyup_events(event, ship):
     """ Respond to key releases """
