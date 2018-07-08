@@ -19,12 +19,16 @@ def run_game():
 
     # Set background color RGB values.
     bg_color = (0, 191, 255)
-    # Make a ship
+    # Make a ship, a group of bullets, and a group of alien ships
     ship = Ship(ai_settings, screen)
     # Make a group to store bullets in
     bullets = Group()
+    aliens = Group()
     # Make an alien.
     alien = Alien(ai_settings, screen)
+
+    # Create a fleet of alien ships
+    gf.create_fleet(ai_settings, screen, aliens)
 
     # Start main loop for game
     # Event loop
@@ -33,7 +37,7 @@ def run_game():
         ship.update()
         gf.update_bullets(bullets)
         # Creating an instance of alien
-        gf.update_screen(ai_settings, screen, ship, alien, bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
 # Initializes game and starts main loop
 run_game()
