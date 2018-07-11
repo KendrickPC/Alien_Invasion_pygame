@@ -28,7 +28,7 @@ def run_game():
     alien = Alien(ai_settings, screen)
 
     # Create a fleet of alien ships
-    gf.create_fleet(ai_settings, screen, aliens)
+    gf.create_fleet(ai_settings, screen, aliens, ship)
 
     # Start main loop for game
     # Event loop
