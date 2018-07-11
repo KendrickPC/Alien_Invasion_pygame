@@ -1,5 +1,5 @@
 # This file is created to prevent alien_invasions.py from
-# being too lengthy. 
+# being too lengthy.
 # Also, it will make the logic from alien_invasions.py easier to follow.
 
 import sys
@@ -8,11 +8,18 @@ from bullet import Bullet
 from alien import Alien
 
 
+def get_number_rows(ai_settings, ship_height, alien_height):
+    """ Determine the # of rows of alien ships fitting on screen. """
+    available_space_y = (ai_settings.screen_height -
+                         (3 * alien_height) - ship_height)
+
+
 def get_number_aliens_x(ai_settings, alien_width):
     """ Determine the number of alien ships that fit in a row """
     available_space_x = ai_settings.screen_width - 2 * alien_width
     number_aliens_x = int(available_space_x / (2 * alien_width))
     return number_aliens_x
+
 
 def create_alien(ai_settings, screen, aliens, alien_number):
     """ Create an alien ship and place it in its row """
@@ -20,19 +27,21 @@ def create_alien(ai_settings, screen, aliens, alien_number):
     alien_width = alien.rect.width
     alien.x = alien_width + 2 * alien_width * alien_number
     alien.rect.x = alien.x
-    aliens.add(alien)    
+    aliens.add(alien)
 
-#Creating a fleet of alien ships
+
+# Creating a fleet of alien ships
 def create_fleet(ai_settings, screen, aliens):
     """ Create a full fleet of alien ships """
     # Create an alien ship and find the number of alien ships in a row
     alien = Alien(ai_settings, screen)
-    get_number_aliens_x = get_number_aliens_x(ai_settings, alien.rect.width)
-    
+    number_aliens_x = get_number_aliens_x(ai_settings, alien.rect.width)
+
     # Creating first row of aliens
     for alien_number in range(number_aliens_x):
         # Create an alien ship and place it in its row
         create_alien(ai_settings, screen, aliens, alien_number)
+
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
     """ Respond to keypresses. """
@@ -48,12 +57,14 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
     elif event.key == pygame.K_q:
         sys.exit()
 
+
 def check_keyup_events(event, ship):
     """ Respond to key releases """
     if event.key == pygame.K_RIGHT:
         ship.moving_right = False
     elif event.key == pygame.K_LEFT:
         ship.moving_left = False
+
 
 def check_events(ai_settings, screen, ship, bullets):
     # Watch for keyboard and mouse events.
@@ -65,12 +76,14 @@ def check_events(ai_settings, screen, ship, bullets):
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
 
+
 def fire_bullet(ai_settings, screen, ship, bullets):
     """ Fire a bullet if 3 bullet limit is not reached """
     # Create a new bullet and add it to the bullets group
     if len(bullets) < ai_settings.bullets_allowed:
         new_bullet = Bullet(ai_settings, screen, ship)
         bullets.add(new_bullet)
+
 
 def update_screen(ai_settings, screen, ship, aliens, bullets):
     """ Update images on the screen and flip to a new screen. """
@@ -86,6 +99,7 @@ def update_screen(ai_settings, screen, ship, aliens, bullets):
     # Make the most recently drawn screen visible.
     pygame.display.flip()
 
+
 def update_bullets(bullets):
     """ Update position of bullets and get rid of old bullets """
     # Update bullet position.
@@ -95,6 +109,3 @@ def update_bullets(bullets):
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
-
-
-
