@@ -1,3 +1,4 @@
+""" Alien ship class """
 import pygame
 from pygame.sprite import Sprite
 
@@ -12,6 +13,7 @@ class Alien(Sprite):
         self.ai_settings = ai_settings
 
         # Load the alien_image_final.bmp and set its rect attributes
+        # self.image = pygame.image.load('images/star_resized.bmp')
         self.image = pygame.image.load('images/alien_image_final.bmp')
         self.rect = self.image.get_rect()
 
@@ -25,3 +27,8 @@ class Alien(Sprite):
     def blitme(self):
         """ Draw the alien ship at its current location. """
         self.screen.blit(self.image, self.rect)
+
+    def update(self):
+        """ Move alien ship right """
+        self.x += self.ai_settings.alien_speed_factor
+        self.rect.x = self.x

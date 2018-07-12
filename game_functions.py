@@ -8,6 +8,10 @@ from bullet import Bullet
 from alien import Alien
 
 
+def update_aliens(alien):
+    """ Update the positions of all aliens in the fleet """
+    aliens.update()
+
 def get_number_rows(ai_settings, ship_height, alien_height):
     """ Determine the # of rows of alien ships fitting on screen. """
     available_space_y = (ai_settings.screen_height -
