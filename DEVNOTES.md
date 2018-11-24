@@ -2,12 +2,7 @@
 
 ##### Wednesday, November 21, 2018
 
-- Test Chapter 12 to make sure pygame is working correctly.
+End Point: 
 
-- Chapter 13 
-p. 266
-
-https://github.com/ehmatthes/pcc/tree/master/chapter_12
-
-- Creating the Fleet p. 271
+Refactoring create_fleet() p. 273
 
