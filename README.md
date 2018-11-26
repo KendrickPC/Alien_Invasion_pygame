@@ -16,7 +16,11 @@ Ended at Try It Yourself 13-1 Stars:
 
 <!-- Need to work 13-1, 13-2 -->
 
-Edge detection for alien ships
+Ending the Game.
+p. 287
 
-Dropping the Fleet and Changing Directions
+
+
+
+
 
