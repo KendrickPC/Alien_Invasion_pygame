@@ -16,9 +16,5 @@ Ended at Try It Yourself 13-1 Stars:
 
 <!-- Need to work 13-1, 13-2 -->
 
-Drawing the Button to the Screen
-p. 294
-
-
-
-
+Starting the Game
+p.295
