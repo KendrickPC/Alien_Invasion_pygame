@@ -17,5 +17,5 @@ Ended at Try It Yourself 13-1 Stars:
 <!-- Need to work 13-1, 13-2 -->
 
 Begin at the following:
-Scoring 
-p.301
+Updating the Score as Aliens are Shot Down
+p.304
