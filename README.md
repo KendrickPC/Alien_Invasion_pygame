@@ -16,5 +16,6 @@ Ended at Try It Yourself 13-1 Stars:
 
 <!-- Need to work 13-1, 13-2 -->
 
-Starting the Game
-p.295
+Begin at the following:
+Scoring 
+p.301
