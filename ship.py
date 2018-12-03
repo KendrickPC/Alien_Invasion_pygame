@@ -7,7 +7,7 @@ class Ship(Sprite):
     def __init__(self, ai_settings, screen):
         """Initialize the ship, and set its starting position."""
         """
-        Import Sprite and make sure Ship inherits from Sprite 
+        Import Sprite and make sure Ship inherits from Sprite
         and call super() at the beginning of __init__()
         """
         super(Ship, self).__init__()

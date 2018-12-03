@@ -16,8 +16,6 @@ Ended at Try It Yourself 13-1 Stars:
 
 <!-- Need to work 13-1, 13-2 -->
 
-Begin at the following:
+Monday, December 03, 2018
 
-Displaying Number of ships aka displaying player lives.
-
-p. 313
+Alien Invasion FINISHED!
