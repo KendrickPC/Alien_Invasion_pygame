@@ -18,6 +18,6 @@ Ended at Try It Yourself 13-1 Stars:
 
 Begin at the following:
 
-Impliment High Score
+Displaying Number of ships aka displaying player lives.
 
-p. 308
+p. 313
