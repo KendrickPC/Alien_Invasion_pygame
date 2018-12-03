@@ -17,9 +17,7 @@ Ended at Try It Yourself 13-1 Stars:
 <!-- Need to work 13-1, 13-2 -->
 
 Begin at the following:
-Making Sure to Score All Hits
-p.305
 
-<!-- Reminder -->
-sb variable = scoreboard. 
+Impliment High Score
 
+p. 308
