@@ -19,3 +19,22 @@ Ended at Try It Yourself 13-1 Stars:
 Monday, December 03, 2018
 
 Alien Invasion FINISHED!
+
+Tuesday, December 04, 2018
+
+Testing. Bugs fixed. Game complete.
+
+<!-- Make game playable through settings.py -->
+
+initialize_dynamic_settings function 
+and __init__ function with self.bullet_width.
+
+
+
+
+
+
+
+
+
+
